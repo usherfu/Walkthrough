@@ -6,7 +6,7 @@ sap.ui.define([
 	return Controller.extend("sap.ui.demo.wt.controller.App", {
 		onShowHello : function() {
 			//alert("Hello World!!!");
-			MessageToast.show("Hello World");
+			MessageToast.show("Hello World!!!");
 		}
 	});
 });
