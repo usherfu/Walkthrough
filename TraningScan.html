@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color:Whitesmoke;
+    font-size:70vh;
+}
+
+body, html{
+  height:100%;
+}
+</style>
+<body>
+    <div id="number" class="container" onclick=myFunction()>&#128526</div>
+
+    <script>
+        var ticker;
+
+        function myFunction() {        
+  
+            if (ticker == null) {
+                                
+                ticker = setInterval(function() {
+                    document.getElementById("number").innerHTML = Math.floor(Math.random() * 20);
+
+                    var body = document.body; 
+                    body.style.backgroundColor = body.style.backgroundColor == "blue" ? "green" : "blue";
+                }, 3000);
+
+            }
+            else {
+
+                clearInterval(ticker);
+                ticker = null
+                emoji =  Math.floor(Math.random() * (128552 - 128512) + 128512);    
+                document.getElementById("number").innerHTML = "&#" + emoji;
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
